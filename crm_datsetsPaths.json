@@ -1,0 +1,14 @@
+[
+  {
+    "relative_url": "Sale-Warehouse-Azure/refs/heads/main/dataset/source-crm/cust_info.csv",
+    "file_name": "cust_info.csv"
+  },
+  {
+    "relative_url": "Sale-Warehouse-Azure/refs/heads/main/dataset/source-crm/prd_info.csv",
+    "file_name": "prd_info.csv"
+  },
+  {
+    "relative_url": "Sale-Warehouse-Azure/refs/heads/main/dataset/source-crm/sales_details.csv",
+    "file_name": "sales_details.csv"
+  }
+]
