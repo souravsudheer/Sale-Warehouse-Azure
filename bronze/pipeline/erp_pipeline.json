@@ -5,6 +5,8 @@
 			{
 				"name": "LookupForEachERP",
 				"type": "Lookup",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -35,6 +37,8 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Failed",
 				"dependsOn": [
 					{
 						"activity": "LookupForEachERP",
@@ -122,31 +126,8 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "Set Error Flag",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "ForEach1",
-						"dependencyConditions": [
-							"Failed"
-						]
-					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": []
 			}
 		],
-		"parameters": {
-			"batch_date": {
-				"type": "string",
-				"defaultValue": "@formatDateTime(utcnow(), 'yyyy-MM-dd')"
-			}
-		},
 		"annotations": [],
 		"lastPublishTime": "2025-09-04T07:44:47Z"
 	},
