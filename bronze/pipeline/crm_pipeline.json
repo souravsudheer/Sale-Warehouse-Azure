@@ -19,7 +19,7 @@
 						"value": "@activity('LookupForEachCRM').output.value",
 						"type": "Expression"
 					},
-					"isSequential": true,
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Copy data from GH",
@@ -122,8 +122,31 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "Set Error Flag",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
 			}
 		],
+		"parameters": {
+			"batch_date": {
+				"type": "string",
+				"defaultValue": "@formatDateTime(utcnow(), 'yyyy-MM-dd')"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2025-09-04T07:48:08Z"
 	},
