@@ -1,0 +1,19 @@
+{
+    "name": "JsonCRMfiles",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "GetJSONGitHub",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "Json",
+        "typeProperties": {
+            "location": {
+                "type": "HttpServerLocation",
+                "relativeUrl": "Sale-Warehouse-Azure/refs/heads/main/crm_datsetsPaths.json"
+            }
+        },
+        "schema": {}
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
