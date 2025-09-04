@@ -1,0 +1,9 @@
+{
+	"name": "sales-datawarehousedf99",
+	"location": "australiasoutheast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b550e6d3-f793-45d7-a5f0-230c37e09d1e",
+		"tenantId": "810fe486-dcd6-458b-a243-036b09b14d6a"
+	}
+}
