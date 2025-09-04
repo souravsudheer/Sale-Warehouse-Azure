@@ -1,5 +1,5 @@
 {
-    "name": "SinkCsv",
+    "name": "SinkCsvCRM",
     "properties": {
         "linkedServiceName": {
             "referenceName": "SinkDataLake",
